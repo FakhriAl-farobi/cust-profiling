@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+plotly
+ydata-profiling
+openpyxl
+pyarrow
+statsmodels
