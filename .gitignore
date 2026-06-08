@@ -1,0 +1,20 @@
+dataset/
+growth prediction/
+Merchant Profiling/
+qris insight/
+SQL/
+streamlit/*
+!streamlit/final proto/
+streamlit/final proto/*
+!streamlit/final proto/marketing_insight_v8.py
+bersama_KMeans-RFM.ipynb
+bersama_RFM-hybrid.ipynb
+bersama_rule-based-RFM.ipynb
+bersama_v1.ipynb
+bersama_v2.ipynb
+extract_features_v4.ipynb
+marketing_insight_v1 - Copy.ipynb
+marketing_insight_v2.ipynb
+marketing_insight_v3.ipynb
+marketing_insight_v4.ipynb
+ML_Dev_Intern___Study_case.ipynb

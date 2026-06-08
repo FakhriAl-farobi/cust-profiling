@@ -12,16 +12,12 @@ from sklearn.cluster import (
     AffinityPropagation, MeanShift, SpectralClustering, OPTICS, Birch
 )
 from sklearn.impute import SimpleImputer
+from sklearn.cluster import HDBSCAN
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.metrics import silhouette_score, calinski_harabasz_score, davies_bouldin_score
 
 import google.generativeai as genai
-
-try:
-    import hdbscan
-except ImportError:
-    hdbscan = None
 
 st.set_page_config(
     page_title="Artajasa Customer Profiling",
@@ -62,7 +58,7 @@ def get_mcc_ranges():
         "Government Services": (9000, 9999),
     }
 
-genai.configure(api_key="AIzaSyBj6A5WO-C5bGsI2UqI5_3QMeKbYuE6B4Y")
+genai.configure(api_key="AIzaSyDox-2FOKMk2QWOygo6elg0xPblXYFEKBk")
 
 def rename_cluster_agent(new_names: dict) -> str:
     if "cluster_mapping" not in st.session_state:
@@ -658,7 +654,7 @@ def main():
                 elif model_type == "Agglomerative (Hierarchical)": model = AgglomerativeClustering(n_clusters=k, linkage=link_type)
                 elif model_type == "DBSCAN": model = DBSCAN(eps=eps, min_samples=min_samples)
                 elif model_type == "OPTICS": model = OPTICS(min_samples=min_samples, max_eps=eps)
-                elif model_type == "HDBSCAN": model = hdbscan.HDBSCAN(min_cluster_size=min_cluster_size)
+                elif model_type == "HDBSCAN": model = HDBSCAN(min_cluster_size=min_cluster_size)
                 elif model_type == "BIRCH": model = Birch(n_clusters=k)
 
                 try:
