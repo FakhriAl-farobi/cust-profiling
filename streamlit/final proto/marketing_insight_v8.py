@@ -58,11 +58,7 @@ def get_mcc_ranges():
         "Government Services": (9000, 9999),
     }
 
-<<<<<<< HEAD
-genai.configure(api_key="AIzaSyDox-2FOKMk2QWOygo6elg0xPblXYFEKBk")
-=======
 genai.configure(api_key="")
->>>>>>> ed63be5ca5cb35ab587dc5125f698c26ba0e2a58
 
 def rename_cluster_agent(new_names: dict) -> str:
     if "cluster_mapping" not in st.session_state:
