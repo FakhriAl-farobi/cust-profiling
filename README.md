@@ -1,6 +1,6 @@
 # Customer Profiling & Behavioral Analysis
 
-End-to-end analytical pipeline transforming raw transaction data into actionable business intelligence. This project covers the complete data lifecycle: from data cleaning and pipeline architecture, to advanced feature engineering (RFM + behavioral metrics), unsupervised machine learning, and deployment via an interactive web dashboard.
+This project includes a platform for customer profiling from transaction data. RFM is used to discover large clusters, while unsupervised machine learning algorithms are used to uncover micro-behaviors as customer subclusters.
 
 ## Key Features
 
