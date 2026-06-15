@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: theme('colors.line');
+  }
+
+  body {
+    @apply bg-corporate-50 text-ink antialiased;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-lg border border-line bg-white shadow-soft;
+  }
+
+  .subtle-panel {
+    @apply rounded-lg border border-corporate-100 bg-corporate-50/70;
+  }
+
+  .field {
+    @apply w-full rounded-md border border-line bg-white px-3 py-2 text-sm text-ink outline-none transition focus:border-corporate-500 focus:ring-2 focus:ring-corporate-200;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-corporate-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-corporate-800 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border border-line bg-white px-3 py-2 text-sm font-semibold text-corporate-800 transition hover:bg-corporate-50;
+  }
+
+  .tab {
+    @apply rounded-md px-3 py-2 text-sm font-semibold text-muted transition hover:bg-corporate-50 hover:text-corporate-800;
+  }
+
+  .tab-active {
+    @apply bg-corporate-700 text-white hover:bg-corporate-700 hover:text-white;
+  }
+}
